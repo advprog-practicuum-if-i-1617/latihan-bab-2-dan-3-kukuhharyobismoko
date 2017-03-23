@@ -5,12 +5,27 @@
  */
 package latihan;
 
+import java.util.Scanner;
+
 /**
  *
- * @author ridho
+ * @author kukuh
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        System.out.println("1.Angka -> Huruf");
+        System.out.println("2.Huruf -> Angka");
+        System.out.print("Pilih : ");
+        Scanner sc=new Scanner(System.in);
+        int pilih=sc.nextInt();
+        if (pilih==1) {
+            System.out.print("Masukkan angka : ");int angka=sc.nextInt();
+            System.out.println(Convert.change(angka));
+        }else if (pilih==2) {
+            System.out.print("Masukkan huruf : ");
+            String huruf=sc.nextLine();
+            huruf=sc.nextLine();
+            System.out.println(Convert.change(huruf));
+        }
     }
 }
